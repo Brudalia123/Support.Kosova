@@ -1,0 +1,142 @@
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <button onclick="goToPage('home')">Home</button>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="content">
+            <h1>Kontaktoni na për Mbështetje</h1>
+            <p>Për çdo pyetje ose kërkesë mbështetjeje, ju lutemi plotësoni formularin më poshtë dhe ekipi ynë do t'ju përgjigjet sa më shpejt të jetë e mundur.</p>
+
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Emri juaj:</label>
+                    <input type="text" id="name" name="name" required placeholder="Shkruani emrin tuaj">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Shkruani emailin tuaj">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mesazhi juaj:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Shkruani mesazhin tuaj"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Dërgo Mesazhin</button>
+            </form>
+
+            <h2>Na kontaktoni direkt:</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@faqja.com">support.Kosova01@gmail.com</a></li>
+                <li><strong>Telefon:</strong> +355 123 456 789</li>
+                <li><strong>Adresa:</strong> Rruga Imagjinare 123, Tiranë, Shqipëri</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Faqja jonë - Kontakti</p>
+    </div>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .navbar button:hover {
+            background-color: #45a049;
+        }
+
+        /* Main Content Styling */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1, .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        // Funksioni për të çuar përdoruesin në faqen përkatëse
+        function goToPage(page) {
+            if (page === 'home') {
+                window.location.href = 'Website1.html';  // Çon në faqen kryesore
+
+            }
+        }
+    </script>
+
+</body>

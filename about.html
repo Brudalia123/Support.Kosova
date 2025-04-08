@@ -1,0 +1,116 @@
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <button onclick="goToPage('home')">Home</button>
+    </div>
+
+    <!-- Help & Support Section -->
+    <section id="support">
+        <div class="content">
+            <h1>Help & Support</h1>
+            <p>Mirësevini në faqen tonë të ndihmës dhe mbështetjes. Ne jemi këtu për të ndihmuar!</p>
+
+            <h2>Çfarë mund të bëni këtu?</h2>
+            <ul>
+                <li><strong>Shpjegimi i Shërbimeve:</strong> Ne ofrojmë një gamë shërbimesh dhe mund t'ju ndihmojmë të kuptoni si t'i përdorni ato.</li>
+                <li><strong>Ndihma për Probleme Teknike:</strong> Nëse keni ndonjë problem me faqen, mund të na kontaktoni dhe do të gjejmë një zgjidhje.</li>
+                <li><strong>Kontakti me Mbështetje:</strong> Për çdo pyetje, ju mund të na kontaktoni nëpërmjet emailit ose telefonit. Ne do të përgjigjemi shpejt!</li>
+            </ul>
+
+            <h2>Si të na kontaktoni:</h2>
+            <p>Për çdo pyetje ose shqetësim, mund të na kontaktoni nëpërmjet:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@faqja.com">support.Kosova01@gmail.com</a></li>
+                <li><strong>Telefon:</strong> +355 123 456 789</li>
+                <li><strong>Formular Kontakti:</strong> <a href="contact.html">Klikoni këtu për të dërguar një mesazh</a></li>
+            </ul>
+
+            <h2>Përgjigje të Shpejta:</h2>
+            <p>Shumë herë, përdoruesit kanë pyetje të zakonshme. Mund të shikoni seksionin tonë të pyetjeve të shpeshta për të gjetur përgjigje më shpejt:</p>
+            <ul>
+                <li><a href="#faq">Përgjigje për Pyetje të Shpeshta (FAQ)</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Faqja jonë - Ndihmë dhe Mbështetje</p>
+    </div>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .navbar button:hover {
+            background-color: #45a049;
+        }
+
+        /* Main Content Styling */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1, .content h2 {
+            color: #333;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin: 10px 0;
+        }
+
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        // Funksioni për të çuar përdoruesin në faqen përkatëse
+        function goToPage(page) {
+            if (page === 'home') {
+                window.location.href = 'Website1.html';  // Çon në faqen kryesore
+            } else if (page === 'support') {
+                window.location.href = 'support.html';  // Çon në faqen Help & Support
+            }
+        }
+    </script>
+
+</body>

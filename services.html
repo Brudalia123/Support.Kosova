@@ -1,0 +1,138 @@
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <button onclick="goToPage('home')">Home</button>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="content">
+            <h1>Shërbimet tona</h1>
+            <p>Ne ofrojmë shërbime të ndryshme për t'ju ndihmuar dhe për t'ju mbështetur gjatë përdorimit të faqes sonë.</p>
+
+            <div class="service">
+                <h2>Shërbimi 1: Mbështetje Teknike</h2>
+                <p>Ne ofrojmë mbështetje teknike për përdoruesit që hasin vështirësi me faqen tonë. Kjo mund të përfshijë ndihmën për hyrje në llogari, ndihmë me teknologjinë, dhe zgjidhjen e problemeve teknike.</p>
+            </div>
+
+            <div class="service">
+                <h2>Shërbimi 2: Ndihmë për Përdoruesit</h2>
+                <p>Ne ofrojmë mbështetje për përdoruesit që kanë pyetje mbi përdorimin e shërbimeve që ofrojmë. Pavarësisht nëse është për ndihmë për krijimin e një llogarie, përdorimin e shërbimeve, ose kërkesa të tjera, ekipi ynë është i gatshëm të ndihmojë.</p>
+            </div>
+
+            <div class="service">
+                <h2>Shërbimi 3: Kërkesa për Përmirësime</h2>
+                <p>Ne dëshirojmë të dëgjojmë nga përdoruesit tanë. Nëse keni sugjerime për përmirësime të shërbimeve ose të faqes, ju mund të na kontaktoni dhe do të shqyrtojmë mundësitë për përmirësimin e eksperiencës tuaj.</p>
+            </div>
+
+            <div class="service">
+                <h2>Shërbimi 4: Ndihmë për Pagesa dhe Faturim</h2>
+                <p>Nëse keni pyetje për pagesat, faturat, ose menaxhimin e llogarisë tuaj, ekipi ynë i mbështetjes financiare është këtu për t'ju udhëzuar dhe për t'ju ndihmuar me çdo problem që mund të keni.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support">
+        <div class="content">
+            <h1>Mbështetje dhe Ndihmë</h1>
+            <p>Jemi këtu për t'ju ndihmuar me çdo pyetje ose problem që mund të keni. Ja disa mënyra se si mund të na kontaktoni:</p>
+
+            <h2>Si mund të na kontaktoni?</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@faqja.com">support.Kosova01@gmail.com</a></li>
+                <li><strong>Telefon:</strong> +355 123 456 789</li>
+            </ul>
+
+            <h2>Ndihmë për Pyetje të Shpeshta (FAQ)</h2>
+            <p>Përgjigje për disa nga pyetjet më të shpeshta që përdoruesit bëjnë mund të gjenden në faqen tonë të FAQ.</p>
+            <ul>
+                <li><a href="#faq">Shiko FAQ</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Faqja jonë - Shërbimet dhe Mbështetje</p>
+    </div>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .navbar button:hover {
+            background-color: #45a049;
+        }
+
+        /* Main Content Styling */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1, .content h2 {
+            color: #333;
+        }
+
+        .content p, .content ul {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .service {
+            background-color: #f9f9f9;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        // Funksioni për të çuar përdoruesin në faqen përkatëse
+        function goToPage(page) {
+            if (page === 'home') {
+                window.location.href = 'Website1.html';  // Çon në faqen kryesore
+            }
+        }
+    </script>
+
+</body>

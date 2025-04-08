@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support.Kosova</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ffffff;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff; /* gold on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" data-color="#f44336">Home</a>
+    <a href="#" data-color="#4caf50">Service</a>
+    <a href="#" data-color="#2196f3">About</a>
+    <a href="#" data-color="#9c27b0">Contact</a>
+  </nav>
+
+  <script>
+    const links = document.querySelectorAll("nav a");
+    const body = document.body;
+
+    links.forEach(link => {
+      const color = link.getAttribute("data-color");
+
+      link.addEventListener("mouseenter", () => {
+        body.style.backgroundColor = color;
+      });
+
+      link.addEventListener("mouseleave", () => {
+        body.style.backgroundColor = "";
+      });
+    });
+  </script>
+
+<section style="padding: 40px; background-color: #f9f9f9; font-family: Arial, sans-serif;">
+    <h2 style="text-align: center; color: #333;">Për çka shërben ky website</h2>
+    <p style="max-width: 800px; margin: 20px auto; font-size: 18px; color: #555;">
+      Ky website është krijuar për të ofruar ndihmë dhe mbështetje për të gjithë përdoruesit tanë. Nëse keni ndonjë problem me produktet ose shërbimet tona, ne jemi këtu për t’ju ndihmuar me zgjidhje të shpejta dhe efikase.
+    </p>
+  
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding-top: 30px;">
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #2196f3;">📞 Support 24/7</h3>
+        <p>Ne ofrojmë ndihmë teknike çdo ditë, 24 orë në ditë. Ekipi ynë është gjithmonë i gatshëm të të ndihmojë.</p>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #4caf50;">💬 Live Chat & Email</h3>
+        <p>Na kontakto nëpërmjet live chat-it ose email-it për çdo pyetje që ke. Përgjigjemi shpejt dhe me kujdes.</p>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #ff9800;">📚 Qendra e Ndihmës</h3>
+        <p>Shfleto artikuj ndihmues, udhëzues, dhe përgjigje të pyetjeve më të shpeshta për të gjetur zgjidhje të shpejta.</p>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #9c27b0;">🚀 Zgjidhje Efikase</h3>
+        <p>Ne jemi të përkushtuar për të ofruar zgjidhje profesionale dhe të menjëhershme për çdo problem apo sfidë që hasni.</p>
+      </div>
+    </div>
+  </section>
+  
+  <div>
+    <h2>💬 Chat Realtime</h2>
+    <div id="messages" style="height:200px; overflow-y:scroll; border:1px solid #ccc; padding:10px; margin-bottom:10px;"></div>
+    <input id="name" placeholder="Emri yt" />
+    <input id="message" placeholder="Mesazhi..." />
+    <button onclick="sendMessage()">Dërgo</button>
+  </div>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  
+  <script>
+    // Zëvendëso me të dhënat e tua nga Firebase
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+  
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  
+    const messagesDiv = document.getElementById("messages");
+  
+    function sendMessage() {
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+      if (name && message) {
+        db.ref("chat").push({ name, message });
+        document.getElementById("message").value = "";
+      }
+    }
+  
+    db.ref("chat").on("child_added", snapshot => {
+      const msg = snapshot.val();
+      const el = document.createElement("div");
+      el.textContent = `${msg.name}: ${msg.message}`;
+      messagesDiv.appendChild(el);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
+  </script>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#home">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Main Content Styling */
+        .content {
+            padding: 20px;
+        }
+
+        .content h1 {
+            color: #333;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<script>
+    // Funksioni për të çuar përdoruesin në faqen përkatëse
+    function goToPage(page) {
+        if (page === 'home') {
+            window.location.href = 'index.html';  // Çon në faqen kryesore
+        } else if (page === 'contact') {
+            window.location.href = 'contact.html';  // Çon në faqen Contact
+        }
+    }
+</body>
+
+</body>
+</html>
